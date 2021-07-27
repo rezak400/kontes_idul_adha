@@ -128,7 +128,11 @@ const Home = () => {
                               cursor: "pointer",
                             }}
                           >
-                            <NextImage src="/images/arrow.png" layout="fill" />
+                            <NextImage
+                              src="/images/arrow.png"
+                              layout="fill"
+                              priority={true}
+                            />
                           </Box>
                         </NextLink>
                       </Box>
@@ -266,7 +270,12 @@ const Home = () => {
         <Container>
           <Grid container direction="row-reverse">
             <Grid item xs={12} md={7}>
-              <Box display="flex" height="100%" alignItems="center">
+              <Box
+                display="flex"
+                height="100%"
+                alignItems="center"
+                pl={isTablet ? 0 : 2}
+              >
                 <Box>
                   {/* //! Title Keutamaan1*/}
                   <Box
@@ -286,6 +295,7 @@ const Home = () => {
                         objectFit="contain"
                         priority={true}
                         alt="camel"
+                        flexShrink={0}
                       />
                     </Box>
                     <Typography
@@ -335,7 +345,7 @@ const Home = () => {
                       style={{
                         fontSize: isMobile ? 18 : isTablet ? 24 : 24,
                         textAlign: isTablet ? "center" : "left",
-                        fontWeight: 700,
+                        fontWeight: 500,
                       }}
                     >
                       “Sesungguhnya Allah hanya menerima (kurban) dari
@@ -378,7 +388,7 @@ const Home = () => {
             <Grid item xs={12} md={7}>
               <Box display="flex" height="100%" alignItems="center">
                 <Box>
-                  {/* //! Title Keutamaan1*/}
+                  {/* //! Title Keutamaan2 */}
                   <Box
                     display="flex"
                     alignItems="center"
@@ -396,6 +406,7 @@ const Home = () => {
                         objectFit="contain"
                         priority={true}
                         alt="camel"
+                        flexShrink={0}
                       />
                     </Box>
                     <Typography
@@ -413,7 +424,6 @@ const Home = () => {
                           ? "left"
                           : "left",
                         fontWeight: 700,
-                        lineHeight: "70px",
                       }}
                     >
                       Menambah amal kebaikan
@@ -446,7 +456,7 @@ const Home = () => {
                       style={{
                         fontSize: isMobile ? 18 : isTablet ? 24 : 24,
                         textAlign: isTablet ? "center" : "left",
-                        fontWeight: 700,
+                        fontWeight: 500,
                       }}
                     >
                       “Pada setiap lembar bulunya itu kita memperoleh satu
@@ -481,11 +491,338 @@ const Home = () => {
           </Grid>
         </Container>
       </Box>
-      <Box height="100vh" bgcolor="primary.main">
-        tes
+
+      {/* //! Keutamaan3 */}
+      <Box bgcolor="primary.main" py={isTablet ? 10 : 0}>
+        <Container>
+          <Grid container direction="row-reverse">
+            <Grid item xs={12} md={7}>
+              <Box display="flex" height="100%" alignItems="center">
+                <Box>
+                  {/* //! Title Keutamaan3 */}
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent={isTablet ? "center" : "left"}
+                  >
+                    <Box
+                      mr={isMobile ? 1 : 2}
+                      width={isMobile ? "30px" : "50px"}
+                      height={isMobile ? "30px" : "50px"}
+                      position="relative"
+                    >
+                      <NextImage
+                        src="/images/number3.png"
+                        layout="fill"
+                        objectFit="contain"
+                        priority={true}
+                        alt="camel"
+                      />
+                    </Box>
+                    <Typography
+                      style={{
+                        fontSize: isMobile
+                          ? 24
+                          : isTablet
+                          ? 46
+                          : isMedium
+                          ? 42
+                          : 56,
+                        textAlign: isTablet
+                          ? "center"
+                          : isMedium
+                          ? "left"
+                          : "left",
+                        fontWeight: 700,
+                      }}
+                    >
+                      Sebagai Syiar Agama
+                    </Typography>
+                  </Box>
+
+                  {/* //! gmabar tengah */}
+                  <Hidden mdUp>
+                    <Box
+                      mt={3}
+                      width="100%"
+                      height="170px"
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Box width="100%" height="100%" position="relative">
+                        <NextImage
+                          src="/images/qurban4.png"
+                          layout="fill"
+                          objectFit="contain"
+                          priority={true}
+                          alt="camel"
+                        />
+                      </Box>
+                    </Box>
+                  </Hidden>
+                  <Box mt={isTablet ? 4 : 6}>
+                    <Typography
+                      style={{
+                        fontSize: isMobile ? 18 : isTablet ? 24 : 24,
+                        textAlign: isTablet ? "center" : "left",
+                        fontWeight: 500,
+                      }}
+                    >
+                      Umat Muslim yang melaksanakan kurban sudah turut serta
+                      menyebarkan pesan atau syiar agama, yaitu tentang
+                      kewajiban berkurban yang diperintahkan Allah kepada Nabi
+                      Ibrahim dan anaknya Nabi Ismail.
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Hidden smDown>
+              <Grid item xs={0} md={5}>
+                <Box
+                  width="100%"
+                  height="100vh"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Box width="90%" height="500px" position="relative">
+                    <NextImage
+                      src="/images/qurban4.png"
+                      layout="fill"
+                      objectFit="contain"
+                      priority={true}
+                      alt="camel"
+                    />
+                  </Box>
+                </Box>
+              </Grid>
+            </Hidden>
+          </Grid>
+        </Container>
       </Box>
-      <Box height="100vh" bgcolor="primary.light">
-        tes
+
+      {/* //! Keutamaan4 */}
+      <Box bgcolor="primary.light" py={isTablet ? 10 : 0}>
+        <Container>
+          <Grid container>
+            <Grid item xs={12} md={7}>
+              <Box display="flex" height="100%" alignItems="center">
+                <Box>
+                  {/* //! Title Keutamaan4 */}
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent={isTablet ? "center" : "left"}
+                  >
+                    <Box
+                      mr={isMobile ? 1 : 2}
+                      width={isMobile ? "30px" : "50px"}
+                      height={isMobile ? "30px" : "50px"}
+                      position="relative"
+                      display="block"
+                      flexShrink={0}
+                    >
+                      <NextImage
+                        src="/images/number4.png"
+                        layout="fill"
+                        objectFit="contain"
+                        priority={true}
+                        alt="camel"
+                      />
+                    </Box>
+                    <Typography
+                      style={{
+                        fontSize: isMobile
+                          ? 24
+                          : isTablet
+                          ? 46
+                          : isMedium
+                          ? 42
+                          : 56,
+                        textAlign: isTablet
+                          ? "center"
+                          : isMedium
+                          ? "left"
+                          : "left",
+                        fontWeight: 700,
+                      }}
+                    >
+                      Sebagai Aksi Sosial dan Kemanusiaan
+                    </Typography>
+                  </Box>
+
+                  {/* //! gmabar tengah */}
+                  <Hidden mdUp>
+                    <Box
+                      mt={3}
+                      width="100%"
+                      height="170px"
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Box width="100%" height="100%" position="relative">
+                        <NextImage
+                          src="/images/qurban5.png"
+                          layout="fill"
+                          objectFit="contain"
+                          priority={true}
+                          alt="camel"
+                        />
+                      </Box>
+                    </Box>
+                  </Hidden>
+                  <Box mt={isTablet ? 4 : 6}>
+                    <Typography
+                      style={{
+                        fontSize: isMobile ? 18 : isTablet ? 24 : 24,
+                        textAlign: isTablet ? "center" : "left",
+                        fontWeight: 500,
+                      }}
+                    >
+                      Melalui berkurban kita dapat menghubungkan rasa kasih
+                      sayang dan kepedulian antara fakir miskin dengan golongan
+                      orang yang mampu
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Hidden smDown>
+              <Grid item xs={0} md={5}>
+                <Box
+                  width="100%"
+                  height="100vh"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Box width="90%" height="500px" position="relative">
+                    <NextImage
+                      src="/images/qurban5.png"
+                      layout="fill"
+                      objectFit="contain"
+                      priority={true}
+                      alt="camel"
+                    />
+                  </Box>
+                </Box>
+              </Grid>
+            </Hidden>
+          </Grid>
+        </Container>
+      </Box>
+      {/* //! Keutamaan5 */}
+      <Box bgcolor="primary.main" py={isTablet ? 10 : 0}>
+        <Container>
+          <Grid container direction="row-reverse">
+            <Grid item xs={12} md={7}>
+              <Box display="flex" height="100%" alignItems="center">
+                <Box>
+                  {/* //! Title Keutamaan5 */}
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent={isTablet ? "center" : "left"}
+                  >
+                    <Box
+                      mr={isMobile ? 1 : 2}
+                      width={isMobile ? "30px" : "50px"}
+                      height={isMobile ? "30px" : "50px"}
+                      position="relative"
+                    >
+                      <NextImage
+                        src="/images/number5.png"
+                        layout="fill"
+                        objectFit="contain"
+                        priority={true}
+                        alt="camel"
+                        flexShrink={0}
+                      />
+                    </Box>
+                    <Typography
+                      style={{
+                        fontSize: isMobile
+                          ? 24
+                          : isTablet
+                          ? 46
+                          : isMedium
+                          ? 42
+                          : 56,
+                        textAlign: isTablet
+                          ? "center"
+                          : isMedium
+                          ? "left"
+                          : "left",
+                        fontWeight: 700,
+                      }}
+                    >
+                      Sebagai Tanda Bersyukur
+                    </Typography>
+                  </Box>
+
+                  {/* //! gmabar tengah */}
+                  <Hidden mdUp>
+                    <Box
+                      mt={3}
+                      width="100%"
+                      height="170px"
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Box width="100%" height="100%" position="relative">
+                        <NextImage
+                          src="/images/qurban6.png"
+                          layout="fill"
+                          objectFit="contain"
+                          priority={true}
+                          alt="camel"
+                        />
+                      </Box>
+                    </Box>
+                  </Hidden>
+                  <Box mt={isTablet ? 4 : 6}>
+                    <Typography
+                      style={{
+                        fontSize: isMobile ? 18 : isTablet ? 24 : 24,
+                        textAlign: isTablet ? "center" : "left",
+                        fontWeight: 500,
+                      }}
+                    >
+                      Dengan berqurban secara tidak langsung seluruh masyarakat
+                      masih dapat merasakan nikmat dan berkah kebaikan dari
+                      Allah meskipun sedang dalam keadaan sulit.
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Hidden smDown>
+              <Grid item xs={0} md={5}>
+                <Box
+                  width="100%"
+                  height="100vh"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Box width="90%" height="500px" position="relative">
+                    <NextImage
+                      src="/images/qurban6.png"
+                      layout="fill"
+                      objectFit="contain"
+                      priority={true}
+                      alt="camel"
+                    />
+                  </Box>
+                </Box>
+              </Grid>
+            </Hidden>
+          </Grid>
+        </Container>
       </Box>
       {/* //! end */}
     </Box>
