@@ -6,8 +6,8 @@ import { green, orange } from "@material-ui/core/colors";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#2D964A",
-      light: "#62B649",
+      main: "#208C3E",
+      light: "#2D964A",
     },
     secondary: {
       main: `#FBAF00`,
