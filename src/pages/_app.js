@@ -19,7 +19,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>NextJS MUI</title>
+        <title>Idul Adha</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
