@@ -11,7 +11,7 @@ import useStyles from "./Style";
 import NextImage from "next/image";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
+import NextLink from "next/link";
 const Home = () => {
   const theme = useTheme();
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
@@ -20,7 +20,7 @@ const Home = () => {
 
   const classes = useStyles();
   return (
-    <>
+    <Box>
       <Box bgcolor="primary.main">
         <Grid container>
           <Grid item xs={12} md={7}>
@@ -104,26 +104,33 @@ const Home = () => {
                       justifyContent={isTablet ? "center" : "left"}
                     >
                       <Box>
-                        <Typography
-                          style={{
-                            fontSize: isMobile ? 18 : isTablet ? 24 : 24,
-                            textAlign: isTablet ? "center" : "left",
-                            fontWeight: 700,
-                          }}
-                        >
-                          Kenapa kita harus berqurban?
-                        </Typography>
-                        <Box
-                          width="30px"
-                          height="30px"
-                          position="relative"
-                          style={{
-                            margin: "auto",
-                            marginTop: 10,
-                          }}
-                        >
-                          <NextImage src="/images/arrow.png" layout="fill" />
-                        </Box>
+                        <NextLink href="#section2">
+                          <Typography
+                            style={{
+                              fontSize: isMobile ? 18 : isTablet ? 24 : 24,
+                              textAlign: isTablet ? "center" : "left",
+                              fontWeight: 700,
+                              cursor: "pointer",
+                            }}
+                          >
+                            Kenapa kita harus berqurban?
+                          </Typography>
+                        </NextLink>
+
+                        <NextLink href="#section2">
+                          <Box
+                            width="30px"
+                            height="30px"
+                            position="relative"
+                            style={{
+                              margin: "auto",
+                              marginTop: 10,
+                              cursor: "pointer",
+                            }}
+                          >
+                            <NextImage src="/images/arrow.png" layout="fill" />
+                          </Box>
+                        </NextLink>
                       </Box>
                     </Box>
                   </Box>
@@ -149,8 +156,8 @@ const Home = () => {
         </Grid>
       </Box>
 
-      {/* //! 2 */}
-      <Box bgcolor="primary.light">
+      {/* //! Section2 */}
+      <Box bgcolor="primary.light" id="section2">
         <Container>
           <Grid container>
             <Grid item xs={12} md={7}>
@@ -238,7 +245,7 @@ const Home = () => {
                   justifyContent="center"
                   alignItems="center"
                 >
-                  <Box width="100%" height="400px" position="relative">
+                  <Box width="90%" height="400px" position="relative">
                     <NextImage
                       src="/images/qurban1.png"
                       layout="fill"
@@ -254,19 +261,234 @@ const Home = () => {
         </Container>
       </Box>
 
+      {/* //! Keutamaan1 */}
+      <Box bgcolor="primary.main" py={isTablet ? 10 : 0}>
+        <Container>
+          <Grid container direction="row-reverse">
+            <Grid item xs={12} md={7}>
+              <Box display="flex" height="100%" alignItems="center">
+                <Box>
+                  {/* //! Title Keutamaan1*/}
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent={isTablet ? "center" : "left"}
+                  >
+                    <Box
+                      mr={isMobile ? 1 : 2}
+                      width={isMobile ? "30px" : "50px"}
+                      height={isMobile ? "30px" : "50px"}
+                      position="relative"
+                    >
+                      <NextImage
+                        src="/images/number1.png"
+                        layout="fill"
+                        objectFit="contain"
+                        priority={true}
+                        alt="camel"
+                      />
+                    </Box>
+                    <Typography
+                      style={{
+                        fontSize: isMobile
+                          ? 24
+                          : isTablet
+                          ? 46
+                          : isMedium
+                          ? 42
+                          : 56,
+                        textAlign: isTablet
+                          ? "center"
+                          : isMedium
+                          ? "left"
+                          : "left",
+                        fontWeight: 700,
+                      }}
+                    >
+                      Meningkatkan Taqwa
+                    </Typography>
+                  </Box>
+
+                  {/* //! gmabar tengah */}
+                  <Hidden mdUp>
+                    <Box
+                      mt={3}
+                      width="100%"
+                      height="170px"
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Box width="100%" height="100%" position="relative">
+                        <NextImage
+                          src="/images/qurban2.png"
+                          layout="fill"
+                          objectFit="contain"
+                          priority={true}
+                          alt="camel"
+                        />
+                      </Box>
+                    </Box>
+                  </Hidden>
+                  <Box mt={isTablet ? 4 : 6}>
+                    <Typography
+                      style={{
+                        fontSize: isMobile ? 18 : isTablet ? 24 : 24,
+                        textAlign: isTablet ? "center" : "left",
+                        fontWeight: 700,
+                      }}
+                    >
+                      “Sesungguhnya Allah hanya menerima (kurban) dari
+                      orang-orang yang bertaqwa”.
+                      <Box mt={5}>QS. Al Maidah ayat 27</Box>
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Hidden smDown>
+              <Grid item xs={0} md={5}>
+                <Box
+                  width="100%"
+                  height="100vh"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Box width="90%" height="400px" position="relative">
+                    <NextImage
+                      src="/images/qurban2.png"
+                      layout="fill"
+                      objectFit="contain"
+                      priority={true}
+                      alt="camel"
+                    />
+                  </Box>
+                </Box>
+              </Grid>
+            </Hidden>
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* //! Keutamaan2 */}
+      <Box bgcolor="primary.light" py={isTablet ? 10 : 0}>
+        <Container>
+          <Grid container>
+            <Grid item xs={12} md={7}>
+              <Box display="flex" height="100%" alignItems="center">
+                <Box>
+                  {/* //! Title Keutamaan1*/}
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent={isTablet ? "center" : "left"}
+                  >
+                    <Box
+                      mr={isMobile ? 1 : 2}
+                      width={isMobile ? "30px" : "50px"}
+                      height={isMobile ? "30px" : "50px"}
+                      position="relative"
+                    >
+                      <NextImage
+                        src="/images/number2.png"
+                        layout="fill"
+                        objectFit="contain"
+                        priority={true}
+                        alt="camel"
+                      />
+                    </Box>
+                    <Typography
+                      style={{
+                        fontSize: isMobile
+                          ? 24
+                          : isTablet
+                          ? 46
+                          : isMedium
+                          ? 42
+                          : 56,
+                        textAlign: isTablet
+                          ? "center"
+                          : isMedium
+                          ? "left"
+                          : "left",
+                        fontWeight: 700,
+                        lineHeight: "70px",
+                      }}
+                    >
+                      Menambah amal kebaikan
+                    </Typography>
+                  </Box>
+
+                  {/* //! gmabar tengah */}
+                  <Hidden mdUp>
+                    <Box
+                      mt={3}
+                      width="100%"
+                      height="170px"
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Box width="100%" height="100%" position="relative">
+                        <NextImage
+                          src="/images/qurban3.png"
+                          layout="fill"
+                          objectFit="contain"
+                          priority={true}
+                          alt="camel"
+                        />
+                      </Box>
+                    </Box>
+                  </Hidden>
+                  <Box mt={isTablet ? 4 : 6}>
+                    <Typography
+                      style={{
+                        fontSize: isMobile ? 18 : isTablet ? 24 : 24,
+                        textAlign: isTablet ? "center" : "left",
+                        fontWeight: 700,
+                      }}
+                    >
+                      “Pada setiap lembar bulunya itu kita memperoleh satu
+                      kebaikan.”
+                      <Box mt={5}>Hadist Riwayat Ahmad dan Ibnu Majah</Box>
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Hidden smDown>
+              <Grid item xs={0} md={5}>
+                <Box
+                  width="100%"
+                  height="100vh"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Box width="90%" height="400px" position="relative">
+                    <NextImage
+                      src="/images/qurban3.png"
+                      layout="fill"
+                      objectFit="contain"
+                      priority={true}
+                      alt="camel"
+                    />
+                  </Box>
+                </Box>
+              </Grid>
+            </Hidden>
+          </Grid>
+        </Container>
+      </Box>
       <Box height="100vh" bgcolor="primary.main">
         tes
       </Box>
       <Box height="100vh" bgcolor="primary.light">
         tes
       </Box>
-      <Box height="100vh" bgcolor="primary.main">
-        tes
-      </Box>
-      <Box height="100vh" bgcolor="primary.light">
-        tes
-      </Box>
-    </>
+      {/* //! end */}
+    </Box>
   );
 };
 
