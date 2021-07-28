@@ -187,6 +187,7 @@ const Home = () => {
                         ? "left"
                         : "left",
                       fontWeight: 700,
+                      lineHeight: isMobile ? "30px" : "70px",
                     }}
                   >
                     Kenapa harus qurban
@@ -313,6 +314,7 @@ const Home = () => {
                           ? "left"
                           : "left",
                         fontWeight: 700,
+                        lineHeight: isMobile ? "30px" : "70px",
                       }}
                     >
                       Meningkatkan Taqwa
@@ -424,6 +426,7 @@ const Home = () => {
                           ? "left"
                           : "left",
                         fontWeight: 700,
+                        lineHeight: isMobile ? "30px" : "70px",
                       }}
                     >
                       Menambah amal kebaikan
@@ -534,6 +537,7 @@ const Home = () => {
                           ? "left"
                           : "left",
                         fontWeight: 700,
+                        lineHeight: isMobile ? "30px" : "70px",
                       }}
                     >
                       Sebagai Syiar Agama
@@ -647,6 +651,7 @@ const Home = () => {
                           ? "left"
                           : "left",
                         fontWeight: 700,
+                        lineHeight: isMobile ? "30px" : "70px",
                       }}
                     >
                       Sebagai Aksi Sosial dan Kemanusiaan
@@ -757,6 +762,7 @@ const Home = () => {
                           ? "left"
                           : "left",
                         fontWeight: 700,
+                        lineHeight: isMobile ? "30px" : "70px",
                       }}
                     >
                       Sebagai Tanda Bersyukur
@@ -825,6 +831,61 @@ const Home = () => {
         </Container>
       </Box>
       {/* //! end */}
+
+      {/* //! Tunggu apalagi */}
+      <Box
+        bgcolor="primary.light"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        py={10}
+      >
+        <Box>
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent={isTablet ? "center" : "left"}
+          >
+            <Typography
+              style={{
+                fontSize: isMobile ? 24 : isTablet ? 46 : isMedium ? 42 : 56,
+                textAlign: isTablet ? "center" : isMedium ? "left" : "left",
+                fontWeight: 700,
+              }}
+            >
+              Tunggu Apalagi?
+            </Typography>
+          </Box>
+          <Box display="flex" justifyContent="center" mt={1}>
+            <Button
+              variant="contained"
+              style={{ backgroundColor: theme.palette.secondary.main }}
+            >
+              <Typography
+                style={{
+                  textTransform: "capitalize",
+                  fontSize: isMobile ? 14 : 20,
+                  fontWeight: 600,
+                }}
+              >
+                Yuk kita Qurban!
+              </Typography>
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+      {/* //! end tunggu apalagi */}
+
+      {/* //! Copyright */}
+      <Box
+        bgcolor="primary.main"
+        display="flex"
+        justifyContent="center"
+        py={2}
+        style={{ color: "rgba(255, 255, 255, 0.4)" }}
+      >
+        &copy; Copyright 2021 rezadwiputra.tech
+      </Box>
     </Box>
   );
 };
